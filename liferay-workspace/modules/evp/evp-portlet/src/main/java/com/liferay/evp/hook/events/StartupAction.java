@@ -16,16 +16,16 @@ package com.liferay.evp.hook.events;
 
 import com.liferay.compat.portal.util.PortalUtil;
 import com.liferay.evp.util.EVPConstants;
-import com.liferay.portal.kernel.events.ActionException;
-import com.liferay.portal.kernel.events.SimpleAction;
-import com.liferay.portal.kernel.util.UnicodeProperties;
-import com.liferay.portal.kernel.model.User;
 import com.liferay.expando.kernel.exception.NoSuchTableException;
 import com.liferay.expando.kernel.model.ExpandoColumn;
 import com.liferay.expando.kernel.model.ExpandoColumnConstants;
 import com.liferay.expando.kernel.model.ExpandoTable;
 import com.liferay.expando.kernel.service.ExpandoColumnLocalServiceUtil;
 import com.liferay.expando.kernel.service.ExpandoTableLocalServiceUtil;
+import com.liferay.portal.kernel.events.ActionException;
+import com.liferay.portal.kernel.events.SimpleAction;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.util.UnicodeProperties;
 
 /**
  * @author Ethan Bustad
@@ -64,10 +64,9 @@ public class StartupAction extends SimpleAction {
 	protected void initEVPOverrideStatusExpando() throws Exception {
 		ExpandoTable userExpandoTable = getUserExpandoTable();
 
-		ExpandoColumn expandoColumn =
-			ExpandoColumnLocalServiceUtil.getColumn(
-				userExpandoTable.getTableId(),
-				EVPConstants.EVP_OVERRIDE_STATUS_EXPANDO_COLUMN);
+		ExpandoColumn expandoColumn = ExpandoColumnLocalServiceUtil.getColumn(
+			userExpandoTable.getTableId(),
+			EVPConstants.EVP_OVERRIDE_STATUS_EXPANDO_COLUMN);
 
 		if (expandoColumn == null) {
 			expandoColumn = ExpandoColumnLocalServiceUtil.addColumn(
@@ -90,9 +89,8 @@ public class StartupAction extends SimpleAction {
 	protected void initLDAPExpando() throws Exception {
 		ExpandoTable userExpandoTable = getUserExpandoTable();
 
-		ExpandoColumn expandoColumn =
-			ExpandoColumnLocalServiceUtil.getColumn(
-				userExpandoTable.getTableId(), "ldapCreateTimestamp");
+		ExpandoColumn expandoColumn = ExpandoColumnLocalServiceUtil.getColumn(
+			userExpandoTable.getTableId(), "ldapCreateTimestamp");
 
 		if (expandoColumn == null) {
 			ExpandoColumnLocalServiceUtil.addColumn(
