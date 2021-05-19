@@ -2,39 +2,39 @@ tasks:
   mode: pr
   quality:
     categories:
-    - name: BugPrevention
-    - name: Javadoc
-    - name: Miscellaneous
-    - name: NamingConventions
-    - name: Performance
-    - name: Styling
+      - name: BugPrevention
+      - name: Javadoc
+      - name: Miscellaneous
+      - name: NamingConventions
+      - name: Performance
+      - name: Styling
   upgrade:
     currentVersion: '6.2'
     plugins:
-    - evp-portlet
+      - evp-portlet
     pluginsSDKPath: liferay-plugins-sdk-6.2-ee-sp20/
     upgradeVersion: '7.3'
     upgrades:
-    - name: configure-workspace-path
-    - name: create-workspace
-    - name: configure-plugins
-    - name: plugins-create-modules
-    - name: plugins-convert-build
-    - name: plugins-migrate-code
-    - name: remove-legacy-code
-    - name: update-service-builder-modules
-    - name: upgrade-workspace-version
-    - name: use-target-platform
-    - name: use-release-api
-    - name: auto-correct-breaking-changes
-    - name: find-breaking-changes
-    - name: upgrade-portal-properties
-      params:
-        properties:
-        - liferay-workspace/configs/dev/portal-ext.properties
-        - liferay-workspace/configs/prod/portal-ext.properties
-        - liferay-workspace/configs/local/portal-ext.properties
-        - liferay-workspace/configs/uat/portal-ext.properties
-        - liferay-workspace/modules/example/example-portlet/src/main/java/portal.properties
-    - name: cfg-to-config-file
+      - name: configure-workspace-path
+      - name: create-workspace
+      - name: configure-plugins
+      - name: plugins-create-modules
+      - name: plugins-convert-build
+      - name: plugins-migrate-code
+      - name: remove-legacy-code
+      - name: update-service-builder-modules
+      - name: upgrade-workspace-version
+      - name: use-target-platform
+      - name: use-release-api
+      - name: auto-correct-breaking-changes
+      - name: find-breaking-changes
+      - name: upgrade-portal-properties
+        params:
+          properties:
+            - liferay-workspace/configs/dev/portal-ext.properties
+            - liferay-workspace/configs/prod/portal-ext.properties
+            - liferay-workspace/configs/local/portal-ext.properties
+            - liferay-workspace/configs/uat/portal-ext.properties
+            - liferay-workspace/modules/example/example-portlet/src/main/java/portal.properties
+      - name: cfg-to-config-file
     workspacePath: liferay-workspace/
