@@ -32,9 +32,9 @@
 
 <%@ page import="com.liferay.portal.kernel.portlet.PortletURLUtil" %>
 
-<portlet:defineObjects />
-
 <liferay-theme:defineObjects />
+
+<portlet:defineObjects />
 
 <%
 PortletMode portletMode = liferayPortletRequest.getPortletMode();

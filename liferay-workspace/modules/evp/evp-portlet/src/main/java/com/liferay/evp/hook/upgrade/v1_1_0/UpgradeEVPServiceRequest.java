@@ -254,7 +254,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 	protected Object[] getStatusFields(long requestId) throws Exception {
 		Connection con = null;
 
-		String[] tableNames = new String[] {
+		String[] tableNames = {
 			"evp_USServiceRequest", "evp_ChinaServiceRequest",
 			"evp_SpainServiceRequest", "evp_BrazilServiceRequest",
 			"evp_GermanyServiceRequest"
