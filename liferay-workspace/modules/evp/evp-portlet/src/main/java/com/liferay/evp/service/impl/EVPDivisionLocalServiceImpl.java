@@ -87,7 +87,7 @@ public class EVPDivisionLocalServiceImpl
 	public Map<String, Object> getEVPStats(long companyId, long userId)
 		throws PortalException, SystemException {
 
-		Map<String, Object> evpStats = new HashMap<String, Object>();
+		Map<String, Object> evpStats = new HashMap<>();
 
 		boolean evpStatsUpdate = false;
 
@@ -183,7 +183,7 @@ public class EVPDivisionLocalServiceImpl
 			long companyId, long groupId)
 		throws SystemException {
 
-		Map<String, Object> portletPropsValues = new HashMap<String, Object>();
+		Map<String, Object> portletPropsValues = new HashMap<>();
 
 		for (String portletPropsKey : getSubsidiaryPortletPropsKeys()) {
 			Object subsidiaryPortletPropsValue =
@@ -241,8 +241,7 @@ public class EVPDivisionLocalServiceImpl
 			}
 		}
 
-		_employeesParticipated = new HashSet<String>(
-			_employeesParticipatedLegacy);
+		_employeesParticipated = new HashSet<>(_employeesParticipatedLegacy);
 
 		List<EVPGrantRequest> evpGrantRequests =
 			evpGrantRequestPersistence.findByC_S(
@@ -360,7 +359,7 @@ public class EVPDivisionLocalServiceImpl
 			return _subsidiaryPortletPropsKeys;
 		}
 
-		List<String> portletPropsKeys = new ArrayList<String>();
+		List<String> portletPropsKeys = new ArrayList<>();
 
 		Properties properties = PortletProps.getProperties();
 
@@ -468,15 +467,14 @@ public class EVPDivisionLocalServiceImpl
 
 	private static final int _YEAR_EVP_ESTABLISHED = 2010;
 
-	private Set<String> _employeesParticipated = new HashSet<String>();
-	private Set<String> _employeesParticipatedLegacy = new HashSet<String>();
+	private Set<String> _employeesParticipated = new HashSet<>();
+	private Set<String> _employeesParticipatedLegacy = new HashSet<>();
 	private Date _evpStatsUpdatedDate;
-	private Map<String, Double> _grantMoneyDistributed =
-		new HashMap<String, Double>();
+	private Map<String, Double> _grantMoneyDistributed = new HashMap<>();
 	private int _nonProfitsServed;
 	private int _serviceHoursCompleted;
 	private String[] _subsidiaryPortletPropsKeys;
-	private Map<String, Double> _usdFixingRates = new HashMap<String, Double>();
+	private Map<String, Double> _usdFixingRates = new HashMap<>();
 	private Date _usdFixingRateUpdatedDate;
 
 }

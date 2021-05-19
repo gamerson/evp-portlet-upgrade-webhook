@@ -396,7 +396,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 		contactUserIdsMap = (Map<Long, Long>)serviceContext.getAttribute(
 			"contactUserIdsMap");
 
-		HashMap<Long, Long> evpGrantRequestMap = new HashMap<Long, Long>();
+		HashMap<Long, Long> evpGrantRequestMap = new HashMap<>();
 
 		Connection con = null;
 		PreparedStatement ps = null;

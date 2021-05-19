@@ -617,7 +617,7 @@ public class EVPWorkflowConstants {
 	}
 
 	public static List<String> getSearchableServiceLabels() throws Exception {
-		List<String> searchableServiceLabels = new ArrayList<String>();
+		List<String> searchableServiceLabels = new ArrayList<>();
 
 		for (int serviceStatus :
 				EVPWorkflowConstants.SERVICE_STATUSES_SEARCHABLE) {

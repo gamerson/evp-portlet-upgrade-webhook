@@ -29,7 +29,7 @@ public class EVPWorkflowContextVariablesUtil {
 			long companyId, long subsidiaryGroupId)
 		throws Exception {
 
-		HashMap<String, Object> requestContext = new HashMap<String, Object>();
+		HashMap<String, Object> requestContext = new HashMap<>();
 
 		requestContext.put(
 			EVPWorkflowContextConstants.CREATOR_USER_FULL_NAME,

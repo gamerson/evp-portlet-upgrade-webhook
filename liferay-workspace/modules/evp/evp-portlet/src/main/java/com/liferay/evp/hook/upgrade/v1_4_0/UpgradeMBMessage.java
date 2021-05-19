@@ -89,7 +89,7 @@ public class UpgradeMBMessage extends UpgradeProcess {
 		Property classNameIdProperty = PropertyFactoryUtil.forName(
 			"classNameId");
 
-		List<Long> classNameIds = new ArrayList<Long>();
+		List<Long> classNameIds = new ArrayList<>();
 
 		for (String className : _CLASS_NAMES_MB_MESSAGE) {
 			classNameIds.add(PortalUtil.getClassNameId(className));

@@ -319,7 +319,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 		contactUserIdsMap = (Map<Long, Long>)serviceContext.getAttribute(
 			"contactUserIdsMap");
 
-		HashMap<Long, Long> evpServiceRequestMap = new HashMap<Long, Long>();
+		HashMap<Long, Long> evpServiceRequestMap = new HashMap<>();
 
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -413,8 +413,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 						evpServiceRequest.getEvpServiceRequestId(), new long[0],
 						new String[0]);
 
-					Map<String, Serializable> workflowContext =
-						new HashMap<String, Serializable>();
+					Map<String, Serializable> workflowContext = new HashMap<>();
 
 					ServiceContext workflowServiceContext =
 						new ServiceContext();

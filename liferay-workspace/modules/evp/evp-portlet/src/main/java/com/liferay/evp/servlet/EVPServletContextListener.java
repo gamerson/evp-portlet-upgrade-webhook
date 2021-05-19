@@ -118,7 +118,7 @@ public class EVPServletContextListener
 				"action-key");
 
 			if (resetPermissions) {
-				List<String> actionIds = new ArrayList<String>();
+				List<String> actionIds = new ArrayList<>();
 
 				for (Element actionKeyElement : actionKeyElements) {
 					actionIds.add(actionKeyElement.getText());

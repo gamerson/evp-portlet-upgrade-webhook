@@ -156,7 +156,7 @@ public class UpgradeEVPDivision extends UpgradeProcess {
 	protected Map<String, Long> updateEVPDivisions(long companyId)
 		throws Exception {
 
-		Map<String, Long> evpDivisionIdsMap = new HashMap<String, Long>();
+		Map<String, Long> evpDivisionIdsMap = new HashMap<>();
 
 		EVPDivision rootEVPDivision = fetchOrAddEVPDivision(
 			companyId, 0, _TYPE_ABBREVIATION_ROOT, _TYPE_NAME_ROOT, _TYPE_ROOT);
@@ -233,17 +233,16 @@ public class UpgradeEVPDivision extends UpgradeProcess {
 	private static Map<String, Map<String, String>> _evpDivisionsMap;
 
 	static {
-		Map<String, Map<String, String>> evpDivisionsMap =
-			new HashMap<String, Map<String, String>>();
+		Map<String, Map<String, String>> evpDivisionsMap = new HashMap<>();
 
-		Map<String, String> americasMap = new HashMap<String, String>();
+		Map<String, String> americasMap = new HashMap<>();
 
 		americasMap.put("US", "us");
 		americasMap.put("Brazil", "br");
 
 		evpDivisionsMap.put("Americas", americasMap);
 
-		Map<String, String> emeaMap = new HashMap<String, String>();
+		Map<String, String> emeaMap = new HashMap<>();
 
 		emeaMap.put("France", "fr");
 		emeaMap.put("Germany", "de");
@@ -256,7 +255,7 @@ public class UpgradeEVPDivision extends UpgradeProcess {
 
 		evpDivisionsMap.put("EMEA", emeaMap);
 
-		Map<String, String> apacMap = new HashMap<String, String>();
+		Map<String, String> apacMap = new HashMap<>();
 
 		apacMap.put("Australia", "au");
 		apacMap.put("China", "cn");
