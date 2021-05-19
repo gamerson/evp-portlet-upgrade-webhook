@@ -44,11 +44,10 @@ public class EVPMBMessageLocalServiceImpl extends MBMessageLocalServiceWrapper {
 			return MBMessageUtil.findByThreadReplies(
 				threadId, start, end, new MessageCreateDateComparator(false));
 		}
-		else {
-			return MBMessageUtil.findByTR_S(
-				threadId, status, start, end,
-				new MessageCreateDateComparator(false));
-		}
+
+		return MBMessageUtil.findByTR_S(
+			threadId, status, start, end,
+			new MessageCreateDateComparator(false));
 	}
 
 }

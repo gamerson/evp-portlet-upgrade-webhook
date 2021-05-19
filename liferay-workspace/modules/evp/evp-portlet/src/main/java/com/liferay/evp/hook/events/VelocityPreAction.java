@@ -112,7 +112,7 @@ public class VelocityPreAction extends Action {
 			(Map<String, Object>)request.getAttribute(WebKeys.VM_VARIABLES);
 
 		if (vmVariables == null) {
-			vmVariables = new HashMap<String, Object>();
+			vmVariables = new HashMap<>();
 		}
 
 		for (Map.Entry<String, Object> entry : map.entrySet()) {

@@ -318,7 +318,7 @@ public class EVPWorkflowUtil {
 			return;
 		}
 
-		workflowContext = new HashMap<String, Serializable>(workflowContext);
+		workflowContext = new HashMap<>(workflowContext);
 
 		workflowContext.put(
 			WorkflowConstants.CONTEXT_COMPANY_ID, String.valueOf(companyId));

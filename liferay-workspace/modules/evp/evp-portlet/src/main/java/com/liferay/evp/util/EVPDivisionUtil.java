@@ -36,7 +36,7 @@ import java.util.Set;
 public class EVPDivisionUtil {
 
 	public static Set<Long> getOrganizationGroupIds(long groupId) {
-		Set<Long> groupIds = new HashSet<Long>();
+		Set<Long> groupIds = new HashSet<>();
 
 		groupIds.add(groupId);
 
@@ -99,7 +99,7 @@ public class EVPDivisionUtil {
 			Property divisionOrganizationIdProperty =
 				PropertyFactoryUtil.forName("organizationId");
 
-			List<Long> organizationIds = new ArrayList<Long>();
+			List<Long> organizationIds = new ArrayList<>();
 
 			List<Organization> organizations =
 				OrganizationLocalServiceUtil.getUserOrganizations(userId);

@@ -110,7 +110,7 @@ public class UpgradeEVPRequestOrganization extends UpgradeProcess {
 	protected Set<Long> getRequestOrganizationIds(String tableName)
 		throws Exception {
 
-		Set<Long> requestOrganizationIds = new HashSet<Long>();
+		Set<Long> requestOrganizationIds = new HashSet<>();
 
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -152,8 +152,7 @@ public class UpgradeEVPRequestOrganization extends UpgradeProcess {
 			long companyId, Set<Long> validRequestOrganizationIds)
 		throws Exception {
 
-		HashMap<Long, Long> evpRequestOrganizationsMap =
-			new HashMap<Long, Long>();
+		HashMap<Long, Long> evpRequestOrganizationsMap = new HashMap<>();
 
 		InputStream inputStream = null;
 

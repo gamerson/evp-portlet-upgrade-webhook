@@ -275,7 +275,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 		contactUserIdsMap = (Map<Long, Long>)serviceContext.getAttribute(
 			"contactUserIdsMap");
 
-		HashMap<Long, Long> evpServiceRequestMap = new HashMap<Long, Long>();
+		HashMap<Long, Long> evpServiceRequestMap = new HashMap<>();
 
 		Connection con = null;
 		PreparedStatement ps = null;

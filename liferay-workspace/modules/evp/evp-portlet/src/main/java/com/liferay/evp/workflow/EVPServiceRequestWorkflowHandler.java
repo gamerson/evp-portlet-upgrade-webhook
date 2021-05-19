@@ -144,7 +144,7 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 	protected static <T> Set<T> getIntersection(
 		Collection<T> collection1, Collection<T> collection2) {
 
-		Set<T> set = new HashSet<T>(collection1);
+		Set<T> set = new HashSet<>(collection1);
 
 		set.retainAll(collection2);
 
@@ -152,7 +152,7 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 	}
 
 	protected static List<Integer> getStatuses(long classPK) {
-		List<Integer> statuses = new ArrayList<Integer>();
+		List<Integer> statuses = new ArrayList<>();
 
 		try {
 			List<EVPKaleoForkInstance> evpKaleoForkInstances =

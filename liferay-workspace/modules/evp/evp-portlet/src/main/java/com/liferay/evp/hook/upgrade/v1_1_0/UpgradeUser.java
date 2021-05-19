@@ -117,7 +117,7 @@ public class UpgradeUser extends UpgradeProcess {
 	}
 
 	protected Set<Long> getRequestIds(String tableName) throws Exception {
-		Set<Long> requestIds = new HashSet<Long>();
+		Set<Long> requestIds = new HashSet<>();
 
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -164,7 +164,7 @@ public class UpgradeUser extends UpgradeProcess {
 		Group guestSiteGroup = GroupLocalServiceUtil.getGroup(
 			companyId, GroupConstants.GUEST);
 
-		HashMap<Long, Long> contactUserIdsMap = new HashMap<Long, Long>();
+		HashMap<Long, Long> contactUserIdsMap = new HashMap<>();
 
 		InputStream inputStream = null;
 
