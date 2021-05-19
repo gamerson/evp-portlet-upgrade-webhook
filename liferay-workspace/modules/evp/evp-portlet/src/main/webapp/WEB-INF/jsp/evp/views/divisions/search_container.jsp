@@ -47,7 +47,7 @@
 						<portlet:param name="id" value="${evpDivisionComposite.evpDivisionId}" />
 					</portlet:renderURL>
 
-					<c:set value='<%= UnicodeLanguageUtil.get(pageContext, "subsidiary-configuration") %>' var="configureEVPDivisionURLTitle" /> <%-- FIXME: PortletConfig get/format methods --%>
+					<c:set value='<%= UnicodeLanguageUtil.get(pageContext, "subsidiary-configuration") %>' var="configureEVPDivisionURLTitle" /> <%-- FIXME: PortletConfig get/format methods --%> <%-- FIXME: PortletConfig get/format methods --%>
 
 					<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${configureEVPDivisionURL}', '${configureEVPDivisionURLTitle}', true, 1000)" var="configureEVPDivisionURL" />
 
@@ -108,7 +108,7 @@
 						<portlet:param name="id" value="${evpDivisionComposite.evpDivisionId}" />
 					</portlet:renderURL>
 
-					<c:set value='<%= UnicodeLanguageUtil.get(pageContext, "import-user-from-ldap") %>' var="importUserURLTitle" /> <%-- FIXME: PortletConfig get/format methods --%>
+					<c:set value='<%= UnicodeLanguageUtil.get(pageContext, "import-user-from-ldap") %>' var="importUserURLTitle" /> <%-- FIXME: PortletConfig get/format methods --%> <%-- FIXME: PortletConfig get/format methods --%>
 
 					<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${importUserURL}', '${importUserURLTitle}', true, 400, 400)" var="importUserURL" />
 
