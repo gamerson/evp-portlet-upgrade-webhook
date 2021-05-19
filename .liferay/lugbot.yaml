@@ -2,6 +2,6 @@ tasks:
   mode: pr
   quality:
     categories:
-    - name: BugPrevention
-    - name: Performance
+      - name: BugPrevention
+      - name: Performance
 #

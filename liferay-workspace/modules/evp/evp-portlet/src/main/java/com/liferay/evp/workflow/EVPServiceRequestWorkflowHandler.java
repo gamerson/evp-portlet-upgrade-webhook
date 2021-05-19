@@ -25,12 +25,6 @@ import com.liferay.evp.util.EVPWorkflowUtil;
 import com.liferay.evp.util.PortletKeys;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.Validator;
-import com.liferay.portal.kernel.workflow.BaseWorkflowHandler;
-import com.liferay.portal.kernel.workflow.WorkflowConstants;
-import com.liferay.portal.kernel.workflow.WorkflowTask;
-import com.liferay.portal.kernel.workflow.WorkflowTaskManagerUtil;
 import com.liferay.portal.kernel.model.Group;
 import com.liferay.portal.kernel.model.ResourceConstants;
 import com.liferay.portal.kernel.model.Role;
@@ -43,6 +37,12 @@ import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.UserGroupRoleLocalServiceUtil;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.workflow.BaseWorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
+import com.liferay.portal.kernel.workflow.WorkflowTask;
+import com.liferay.portal.kernel.workflow.WorkflowTaskManagerUtil;
 
 import java.io.Serializable;
 
@@ -84,9 +84,8 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 			EVPServiceRequestLocalServiceUtil.getEVPServiceRequest(
 				evpServiceRequestId);
 
-		ServiceContext serviceContext =
-			(ServiceContext)workflowContext.get(
-				WorkflowConstants.CONTEXT_SERVICE_CONTEXT);
+		ServiceContext serviceContext = (ServiceContext)workflowContext.get(
+			WorkflowConstants.CONTEXT_SERVICE_CONTEXT);
 
 		try {
 			int serviceForkTypeMainStatus = updateEVPKaleoForkInstance(
@@ -304,11 +303,9 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 			companyId, EVPRoleConstants.ROLE_NAME_MANAGER);
 
 		if (Validator.isNull(managerRole)) {
-			managerRole =
-				RoleLocalServiceUtil.addRole(
-					managerUserId, companyId,
-					EVPRoleConstants.ROLE_NAME_MANAGER, null, null,
-					RoleConstants.TYPE_ORGANIZATION);
+			managerRole = RoleLocalServiceUtil.addRole(
+				managerUserId, companyId, EVPRoleConstants.ROLE_NAME_MANAGER,
+				null, null, RoleConstants.TYPE_ORGANIZATION);
 		}
 
 		Group group = GroupLocalServiceUtil.getGroup(groupId);
@@ -322,7 +319,7 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 		if (containsAny(
 				ListUtil.toList(
 					EVPWorkflowConstants.SERVICE_STATUSES_MANAGER_USER),
-					statuses)) {
+				statuses)) {
 
 			ResourcePermissionLocalServiceUtil.setOwnerResourcePermissions(
 				companyId, getClassName(), ResourceConstants.SCOPE_INDIVIDUAL,
@@ -354,7 +351,8 @@ public class EVPServiceRequestWorkflowHandler extends BaseWorkflowHandler {
 				EVPWorkflowConstants.SERVICE_STATUS_MORE_INFO_FROM_USER)) {
 
 			actionIds = new String[] {
-				"EDIT", "SET_OWN_STATUS", "UPDATE", "VIEW"};
+				"EDIT", "SET_OWN_STATUS", "UPDATE", "VIEW"
+			};
 		}
 		else if (containsAny(
 					ListUtil.toList(
