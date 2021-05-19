@@ -105,6 +105,7 @@
 					</c:forEach>
 				</aui:select>
 			</aui:row>
+
 			<c:forEach items="${childEVPServiceRequestComposites}" var="childEVPServiceRequestComposite" varStatus="status">
 				<aui:model-context bean="${childEVPServiceRequestComposite}" model="<%= EVPServiceRequest.class %>" />
 

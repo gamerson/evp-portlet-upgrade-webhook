@@ -81,7 +81,7 @@
 
 					<aui:input cssClass="span12" disabled="${disabled}" helpMessage="please-enter-the-name-of-the-organization-where-you-would-like-the-grant-to-be-sent-or-where-you-will-be-volunteering" name="organizationName" required="${true}" type="text" value="${evpGrantRequestComposite.organization.name}" wrapperCssClass="span6" />
 
-					<aui:model-context bean="${evpGrantRequestComposite}"  model="<%= Website.class %>" />
+					<aui:model-context bean="${evpGrantRequestComposite}" model="<%= Website.class %>" />
 
 					<aui:input cssClass="span12" disabled="${disabled}" helpMessage="please-provide-the-url-of-the-grant-or-service-organization.it-must-include-http" name="url" required="${evpGrantRequestComposite.getCreatorSubsidiaryProperty(PortletPropsKeys.SUBSIDIARY_CONFIGURATION_URL_REQUIRED)}" type="text" value="${evpGrantRequestComposite.requestOrganizationWebsiteURL}" wrapperCssClass="span6">
 						<aui:validator name="url" />
@@ -111,6 +111,7 @@
 								return !val.match('[^A-Za-z0-9\s-]+');
 							}
 						</aui:validator>
+
 						<aui:validator name="maxLength">${EVPConstants.MAX_FIELD_LENGTH_ZIP}</aui:validator>
 					</aui:input>
 
@@ -132,7 +133,7 @@
 						<aui:validator name="email" />
 					</aui:input>
 
-					<aui:model-context bean="${evpGrantRequestComposite.contactUserPhone}"  model="<%= Phone.class %>" />
+					<aui:model-context bean="${evpGrantRequestComposite.contactUserPhone}" model="<%= Phone.class %>" />
 
 					<aui:input cssClass="span12" disabled="${disabled}" helpMessage="please-enter-the-phone-number-of-your-contact" label="contact-phone" name="contactUserPhone" type="text" value="${evpGrantRequestComposite.contactUserPhone.number}" wrapperCssClass="span3" />
 				</aui:row>

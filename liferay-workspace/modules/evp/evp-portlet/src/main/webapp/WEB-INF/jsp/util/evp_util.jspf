@@ -79,7 +79,7 @@ public static class EVPUtil extends com.liferay.evp.util.EVPUtil {
 	}
 
 	public static String generateHash(long evpRequestId) throws Exception {
-		String hash = DigesterUtil.digestHex(Long.toString(System.currentTimeMillis() + evpRequestId));
+		String hash = DigesterUtil.digestHex(String.valueOf(System.currentTimeMillis() + evpRequestId));
 
 		return hash.substring(0, 20);
 	}
@@ -203,7 +203,8 @@ public static class EVPUtil extends com.liferay.evp.util.EVPUtil {
 
 			MBMessage mbMessage = messages.get(messages.size() - 1);
 
-			if (Validator.equals(mbMessage.getBody(), String.valueOf(classPK))) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+			if (Validator.equals(mbMessage.getBody(), String.valueOf(classPK))) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+
 				return StringPool.BLANK;
 			}
 
@@ -308,7 +309,7 @@ public static class EVPUtil extends com.liferay.evp.util.EVPUtil {
 
 		AlloyServiceInvoker evpGrantTransactionAlloyServiceInvoker = new AlloyServiceInvoker(EVPGrantTransaction.class.getName());
 
-		DynamicQuery evpGrantTransactionDynamicQuery = evpGrantTransactionAlloyServiceInvoker.buildDynamicQuery(new Object [] {"userId", userId});
+		DynamicQuery evpGrantTransactionDynamicQuery = evpGrantTransactionAlloyServiceInvoker.buildDynamicQuery(new Object[] {"userId", userId});
 
 		if (year > 0) {
 			Property createDateProperty = PropertyFactoryUtil.forName("createDate");
@@ -321,7 +322,7 @@ public static class EVPUtil extends com.liferay.evp.util.EVPUtil {
 
 		AlloyServiceInvoker evpGrantRequestAlloyServiceInvoker = new AlloyServiceInvoker(EVPGrantRequest.class.getName());
 
-		DynamicQuery evpGrantRequestDynamicQuery = evpGrantRequestAlloyServiceInvoker.buildDynamicQuery(new Object [] {"userId", userId});
+		DynamicQuery evpGrantRequestDynamicQuery = evpGrantRequestAlloyServiceInvoker.buildDynamicQuery(new Object[] {"userId", userId});
 
 		Property evpGrantRequestIdProperty = PropertyFactoryUtil.forName("evpGrantRequestId");
 
@@ -353,7 +354,7 @@ public static class EVPUtil extends com.liferay.evp.util.EVPUtil {
 
 		AlloyServiceInvoker evpServiceRequestAlloyServiceInvoker = new AlloyServiceInvoker(EVPServiceRequest.class.getName());
 
-		DynamicQuery evpServiceRequestDynamicQuery = evpServiceRequestAlloyServiceInvoker.buildDynamicQuery(new Object [] {"userId", userId});
+		DynamicQuery evpServiceRequestDynamicQuery = evpServiceRequestAlloyServiceInvoker.buildDynamicQuery(new Object[] {"userId", userId});
 
 		if (year > 0) {
 			Property requestedStartDateProperty = PropertyFactoryUtil.forName("requestedStartDate");

@@ -53,22 +53,22 @@
 			<c:choose>
 				<c:when test='${actionPath == "index"}'>
 					<liferay-ui:icon-menu>
-					<portlet:renderURL var="selectWebsiteURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
-						<portlet:param name="controller" value="websites" />
-						<portlet:param name="action" value="selectReplacement" />
-						<portlet:param name="id" value="${websiteComposite.websiteId}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="selectWebsiteURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
+							<portlet:param name="controller" value="websites" />
+							<portlet:param name="action" value="selectReplacement" />
+							<portlet:param name="id" value="${websiteComposite.websiteId}" />
+						</portlet:renderURL>
 
-					<c:set value="${fn:escapeXml(websiteComposite.url)}" var="selectWebsiteURLTitle" />
+						<c:set value="${fn:escapeXml(websiteComposite.url)}" var="selectWebsiteURLTitle" />
 
-					<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${selectWebsiteURL}', '${selectWebsiteURLTitle}', true, 2000)" var="selectWebsiteURL" />
+						<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${selectWebsiteURL}', '${selectWebsiteURLTitle}', true, 2000)" var="selectWebsiteURL" />
 
-					<liferay-ui:icon
-						image="edit"
-						message="select-replacement"
-						method="get"
-						url="${selectWebsiteURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							message="select-replacement"
+							method="get"
+							url="${selectWebsiteURL}"
+						/>
 					</liferay-ui:icon-menu>
 				</c:when>
 				<c:when test='${actionPath == "selectReplacement"}'>

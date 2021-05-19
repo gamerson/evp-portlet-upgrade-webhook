@@ -158,7 +158,6 @@
 						</c:if>
 					</ul>
 				</dd>
-
 				<dt title='<liferay-ui:message key="behalf-of" />'>
 					<liferay-ui:message key="behalf-of" />:
 				</dt>

@@ -463,7 +463,7 @@
 							financialReviewFields,
 							function(financialReviewField) {
 								if (A.one('#<portlet:namespace />' + grantType + financialReviewField) != null) {
-									rules['<portlet:namespace/>' + grantType + financialReviewField] = {
+									rules['<portlet:namespace />' + grantType + financialReviewField] = {
 										required: true
 									};
 								}

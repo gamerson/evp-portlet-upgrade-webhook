@@ -106,87 +106,87 @@
 			<c:choose>
 				<c:when test='${actionPath == "index"}'>
 					<liferay-ui:icon-menu>
-					<portlet:renderURL var="editEVPRequestOrganizationURL">
-						<portlet:param name="controller" value="request_organizations" />
-						<portlet:param name="action" value="edit" />
-						<portlet:param name="id" value="${evpRequestOrganization.evpRequestOrganizationId}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="editEVPRequestOrganizationURL">
+							<portlet:param name="controller" value="request_organizations" />
+							<portlet:param name="action" value="edit" />
+							<portlet:param name="id" value="${evpRequestOrganization.evpRequestOrganizationId}" />
+						</portlet:renderURL>
 
-					<liferay-ui:icon
-						image="edit"
-						method="get"
-						url="${editEVPRequestOrganizationURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							method="get"
+							url="${editEVPRequestOrganizationURL}"
+						/>
 
-					<portlet:actionURL var="deleteEVPRequestOrganizationURL">
-						<portlet:param name="controller" value="request_organizations" />
-						<portlet:param name="action" value="delete" />
-						<portlet:param name="id" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
-						<portlet:param name="redirect" value="${alloySearchResult.portletURL}" />
-					</portlet:actionURL>
+						<portlet:actionURL var="deleteEVPRequestOrganizationURL">
+							<portlet:param name="controller" value="request_organizations" />
+							<portlet:param name="action" value="delete" />
+							<portlet:param name="id" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
+							<portlet:param name="redirect" value="${alloySearchResult.portletURL}" />
+						</portlet:actionURL>
 
-					<liferay-ui:icon
-						image="delete"
-						onClick="${renderResponse.namespace}validateDelete('${evpRequestOrganizationComposite.evpGrantRequestsCount}','${evpRequestOrganizationComposite.evpServiceRequestsCount}', '${deleteEVPRequestOrganizationURL}');"
-						url="javascript:"
-					/>
+						<liferay-ui:icon
+							image="delete"
+							onClick="${renderResponse.namespace}validateDelete('${evpRequestOrganizationComposite.evpGrantRequestsCount}','${evpRequestOrganizationComposite.evpServiceRequestsCount}', '${deleteEVPRequestOrganizationURL}');"
+							url="javascript:"
+						/>
 
-					<portlet:renderURL var="selectEVPRequestOrganizationsURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
-						<portlet:param name="controller" value="request_organizations" />
-						<portlet:param name="action" value="selectReplacement" />
-						<portlet:param name="id" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
-						<portlet:param name="keywords" value="${keywords}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="selectEVPRequestOrganizationsURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
+							<portlet:param name="controller" value="request_organizations" />
+							<portlet:param name="action" value="selectReplacement" />
+							<portlet:param name="id" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
+							<portlet:param name="keywords" value="${keywords}" />
+						</portlet:renderURL>
 
-					<c:set value="${fn:escapeXml(evpRequestOrganizationComposite.organization.name)}" var="selectURLTitle" />
+						<c:set value="${fn:escapeXml(evpRequestOrganizationComposite.organization.name)}" var="selectURLTitle" />
 
-					<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${selectEVPRequestOrganizationsURL}', '${selectURLTitle}', true, 2000)" var="selectEVPRequestOrganizationsURL" />
+						<c:set value="javascript:Liferay.Portlet.EVP.openWindow('${selectEVPRequestOrganizationsURL}', '${selectURLTitle}', true, 2000)" var="selectEVPRequestOrganizationsURL" />
 
-					<liferay-ui:icon
-						image="edit"
-						message="select-replacement"
-						method="get"
-						url="${selectEVPRequestOrganizationsURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							message="select-replacement"
+							method="get"
+							url="${selectEVPRequestOrganizationsURL}"
+						/>
 
-					<portlet:renderURL var="manageAddressesEVPRequestOrganizationsURL">
-						<portlet:param name="controller" value="addresses" />
-						<portlet:param name="action" value="index" />
-						<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="manageAddressesEVPRequestOrganizationsURL">
+							<portlet:param name="controller" value="addresses" />
+							<portlet:param name="action" value="index" />
+							<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
+						</portlet:renderURL>
 
-					<liferay-ui:icon
-						image="edit"
-						message="manage-addresses"
-						method="get"
-						url="${manageAddressesEVPRequestOrganizationsURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							message="manage-addresses"
+							method="get"
+							url="${manageAddressesEVPRequestOrganizationsURL}"
+						/>
 
-					<portlet:renderURL var="manageContactsEVPRequestOrganizationsURL">
-						<portlet:param name="controller" value="users" />
-						<portlet:param name="action" value="index" />
-						<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="manageContactsEVPRequestOrganizationsURL">
+							<portlet:param name="controller" value="users" />
+							<portlet:param name="action" value="index" />
+							<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
+						</portlet:renderURL>
 
-					<liferay-ui:icon
-						image="edit"
-						message="manage-contacts"
-						method="get"
-						url="${manageContactsEVPRequestOrganizationsURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							message="manage-contacts"
+							method="get"
+							url="${manageContactsEVPRequestOrganizationsURL}"
+						/>
 
-					<portlet:renderURL var="manageURLsEVPRequestOrganizationsURL">
-						<portlet:param name="controller" value="websites" />
-						<portlet:param name="action" value="index" />
-						<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
-					</portlet:renderURL>
+						<portlet:renderURL var="manageURLsEVPRequestOrganizationsURL">
+							<portlet:param name="controller" value="websites" />
+							<portlet:param name="action" value="index" />
+							<portlet:param name="evpRequestOrganizationId" value="${evpRequestOrganizationComposite.evpRequestOrganizationId}" />
+						</portlet:renderURL>
 
-					<liferay-ui:icon
-						image="edit"
-						message="manage-urls"
-						method="get"
-						url="${manageURLsEVPRequestOrganizationsURL}"
-					/>
+						<liferay-ui:icon
+							image="edit"
+							message="manage-urls"
+							method="get"
+							url="${manageURLsEVPRequestOrganizationsURL}"
+						/>
 					</liferay-ui:icon-menu>
 				</c:when>
 				<c:when test='${actionPath == "selectReplacement"}'>
@@ -209,7 +209,7 @@
 							image="copy"
 							message="replace"
 							url="${replaceEVPRequestOrganizationURL}"
-							/>
+						/>
 					</liferay-ui:icon-menu>
 				</c:when>
 			</c:choose>

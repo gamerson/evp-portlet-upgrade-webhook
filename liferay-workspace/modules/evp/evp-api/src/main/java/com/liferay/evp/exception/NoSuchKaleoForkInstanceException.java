@@ -22,7 +22,6 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 public class NoSuchKaleoForkInstanceException extends NoSuchModelException {
 
 	public NoSuchKaleoForkInstanceException() {
-		super();
 	}
 
 	public NoSuchKaleoForkInstanceException(String msg) {

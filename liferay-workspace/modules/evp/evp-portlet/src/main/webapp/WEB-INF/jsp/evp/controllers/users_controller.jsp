@@ -71,7 +71,6 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			EVPPortalUtil.updateModelProperties(EVPGrantRequest.class.getName(), new Object[] {"contactPhoneId", phone.getPhoneId()}, "contactPhoneId", mainUserPhone.getPhoneId());
 
 			EVPPortalUtil.updateModelProperties(EVPServiceRequest.class.getName(), new Object[] {"contactPhoneId", phone.getPhoneId()}, "contactPhoneId", mainUserPhone.getPhoneId());
-
 		}
 
 		Role organizationContactRole = RoleLocalServiceUtil.getRole(themeDisplay.getCompanyId(), EVPRoleConstants.ROLE_NAME_ORGANIZATION_CONTACT);

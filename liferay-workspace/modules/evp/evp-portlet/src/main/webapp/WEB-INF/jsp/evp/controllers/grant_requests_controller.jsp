@@ -62,7 +62,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			if (evpRequestOrganization.isNew()) {
 				updateModel(evpRequestOrganization, "organizationId", organization.getOrganizationId(), "description", evpRequestOrganizationDescription, "nonprofitType", organizationNonprofitType, "subsidiaryGroupId", subsidiaryEVPDivision.getOrganizationGroupId());
 			}
-			else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+			else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
 				duplicateOrganization = true;
 			}
 
@@ -396,9 +396,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			EVPUtil.addCommentsToDiscussion(request);
 		}
 
-		String description = ParamUtil.getString(request, "evpGrantRequestDescription");
-
-		evpGrantRequest.setDescription(description);
+		evpGrantRequest.setDescription(ParamUtil.getString(request, "evpGrantRequestDescription"));
 
 		EVPRequestOrganization evpRequestOrganization = EVPRequestOrganizationLocalServiceUtil.getEVPRequestOrganization(evpGrantRequest.getEvpRequestOrganizationId());
 
@@ -431,7 +429,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 
 			redirect = ParamUtil.getString(request, "redirect");
 		}
-		else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+		else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
 			redirect = _redirectToView(evpGrantRequest.getEvpGrantRequestId());
 		}
 
@@ -653,9 +651,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			if (transactionType == EVPGrantTransactionConstants.GRANT_TYPE_MATCHING) {
 				UploadPortletRequest uploadPortletRequest = (UploadPortletRequest)request;
 
-				String fullFileName = uploadPortletRequest.getFullFileName("matchingGrantReceiptFile");
-
-				if (Validator.isNull(fullFileName)) {
+				if (Validator.isNull(uploadPortletRequest.getFullFileName("matchingGrantReceiptFile"))) {
 					if (evpGrantRequest.getEvpGrantRequestId() == 0) {
 						throw new AlloyException("a-receipt-for-the-matching-grant-is-required");
 					}
@@ -665,9 +661,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 
 					String[] allowedContentTypes = {ContentTypes.IMAGE_JPEG, "image/png", "image/gif", ContentTypes.APPLICATION_PDF, ContentTypes.APPLICATION_MSWORD, "application/vnd.openxmlformats-officedocument.wordprocessingml.document"};
 
-					String contentType = MimeTypesUtil.getContentType(matchingGrantReceiptFile);
-
-					if (!ArrayUtil.contains(allowedContentTypes, contentType)) {
+					if (!ArrayUtil.contains(allowedContentTypes, MimeTypesUtil.getContentType(matchingGrantReceiptFile))) {
 						throw new AlloyException("the-file-extension-for-your-matching-grant-receipt-must-be-doc-docx-gif-jpeg-pdf-or-png");
 					}
 				}

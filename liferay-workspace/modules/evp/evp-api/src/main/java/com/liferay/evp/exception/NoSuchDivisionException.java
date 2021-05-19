@@ -22,7 +22,6 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 public class NoSuchDivisionException extends NoSuchModelException {
 
 	public NoSuchDivisionException() {
-		super();
 	}
 
 	public NoSuchDivisionException(String msg) {

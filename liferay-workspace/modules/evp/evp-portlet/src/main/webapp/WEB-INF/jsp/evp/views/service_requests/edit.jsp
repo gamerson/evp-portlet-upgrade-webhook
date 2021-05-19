@@ -113,6 +113,7 @@
 								return !val.match('[^A-Za-z0-9\s-]+');
 							}
 						</aui:validator>
+
 						<aui:validator name="maxLength">${EVPConstants.MAX_FIELD_LENGTH_ZIP}</aui:validator>
 					</aui:input>
 
@@ -245,7 +246,6 @@
 			<aui:input cssClass="span12" disabled="${disabled}" label="benefit-to-contacts-organization" name="contactBenefit" type="textarea" value="${evpServiceRequestComposite.contactBenefit}" wrapperCssClass="span12" />
 
 			<aui:input cssClass="span12" disabled="${disabled}" label="comments-from-contact" name="contactComments" type="textarea" value="${evpServiceRequestComposite.contactComments}" wrapperCssClass="span12" />
-
 		</aui:fieldset>
 	</c:if>
 

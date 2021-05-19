@@ -48,21 +48,18 @@
 	<dd>
 		<fmt:formatDate value="${evpEmployeeComposite.hireDate}" />
 	</dd>
-
 	<dt title='<liferay-ui:message key="employment-type" />'>
 		<liferay-ui:message key="employment-type" />:
 	</dt>
 	<dd>
 		<liferay-ui:message key="${evpEmployeeComposite.employmentTypeLabel}" />
 	</dd>
-
 	<dt title='<liferay-ui:message key="subsidiary" />'>
 		<liferay-ui:message key="subsidiary" />:
 	</dt>
 	<dd>
 		<c:out value="${evpEmployeeComposite.subsidiaryEVPDivisionComposite.name}" />
 	</dd>
-
 	<dt title='<liferay-ui:message key="manager-email-address" />'>
 		<liferay-ui:message key="manager-email-address" />:
 	</dt>

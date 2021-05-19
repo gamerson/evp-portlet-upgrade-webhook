@@ -22,7 +22,6 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 public class NoSuchRequestOrganizationException extends NoSuchModelException {
 
 	public NoSuchRequestOrganizationException() {
-		super();
 	}
 
 	public NoSuchRequestOrganizationException(String msg) {

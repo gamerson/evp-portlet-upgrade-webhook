@@ -22,7 +22,6 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 public class NoSuchGrantTransactionException extends NoSuchModelException {
 
 	public NoSuchGrantTransactionException() {
-		super();
 	}
 
 	public NoSuchGrantTransactionException(String msg) {

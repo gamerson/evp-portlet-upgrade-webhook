@@ -226,7 +226,7 @@
 						</portlet:actionURL>
 
 						<liferay-ui:icon-delete
-								url="${deleteEVPGrantRequestURL}"
+							url="${deleteEVPGrantRequestURL}"
 						/>
 					</c:if>
 				</liferay-ui:icon-menu>

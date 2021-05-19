@@ -237,8 +237,8 @@ public class UpgradeEVPDivision extends UpgradeProcess {
 
 		Map<String, String> americasMap = new HashMap<>();
 
-		americasMap.put("US", "us");
 		americasMap.put("Brazil", "br");
+		americasMap.put("US", "us");
 
 		evpDivisionsMap.put("Americas", americasMap);
 

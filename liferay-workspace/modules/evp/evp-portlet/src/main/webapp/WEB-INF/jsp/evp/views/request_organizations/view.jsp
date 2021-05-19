@@ -27,6 +27,7 @@
 	<aui:field-wrapper name="description">
 		${evpRequestOrganization.description}
 	</aui:field-wrapper>
+
 	<aui:field-wrapper name="createdBy">
 		${evpRequestOrganization.creatorUserFullName}
 	</aui:field-wrapper>

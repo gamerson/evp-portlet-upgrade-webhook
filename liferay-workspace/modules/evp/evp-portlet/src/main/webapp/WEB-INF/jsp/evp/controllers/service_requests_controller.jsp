@@ -59,7 +59,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			if (evpRequestOrganization.isNew()) {
 				updateModel(evpRequestOrganization, "organizationId", organization.getOrganizationId(), "description", evpRequestOrganizationDescription, "nonprofitType", organizationNonprofitType, "subsidiaryGroupId", subsidiaryEVPDivision.getOrganizationGroupId());
 			}
-			else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+			else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
 				duplicateOrganization = true;
 			}
 
@@ -569,7 +569,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 
 			redirect = ParamUtil.getString(request, "redirect");
 		}
-		else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+		else if (!Validator.equals(evpRequestOrganization.getTaxIdentificationNumber(), taxIdentificationNumber) || !Validator.equals(evpRequestOrganization.getDescription(), evpRequestOrganizationDescription) || (evpRequestOrganization.getNonprofitType() != organizationNonprofitType)) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%> <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
 			redirect = _redirectToView(evpServiceRequest.getEvpServiceRequestId());
 		}
 
@@ -830,11 +830,11 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			throw new AlloyException("start-date-of-the-service-is-required");
 		}
 
-		if (CalendarUtil.beforeByDay(EVPUtil.fetchDate(request, "confirmedEndDateString"  + index), confirmedStartDate)) {
+		if (CalendarUtil.beforeByDay(EVPUtil.fetchDate(request, "confirmedEndDateString" + index), confirmedStartDate)) {
 			throw new AlloyException("the-end-date-must-be-after-or-equal-to-the-start-date");
 		}
 
-		int confirmedTotalHours = ParamUtil.getInteger(request, "confirmedTotalHours"  + index);
+		int confirmedTotalHours = ParamUtil.getInteger(request, "confirmedTotalHours" + index);
 
 		if (confirmedTotalHours <= 0) {
 			throw new AlloyException("total-hours-is-invalid");

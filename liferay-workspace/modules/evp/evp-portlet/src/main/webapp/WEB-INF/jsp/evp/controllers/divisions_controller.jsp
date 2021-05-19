@@ -318,7 +318,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			try {
 				divisionOrganization = OrganizationLocalServiceUtil.addOrganization(themeDisplay.getUserId(), parentOrganizationId, organizationName, false);
 			}
-			catch(Exception e) {
+			catch (Exception e) {
 				throw new AlloyException(translate("an-organization-with-the-name-x-already-exists", organizationName));
 			}
 
