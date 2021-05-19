@@ -36,7 +36,7 @@ public static class EVPPermission extends AlloyPermission {
 	public static boolean contains(ThemeDisplay themeDisplay, BaseModel<?> baseModel, String action) {
 		String modelClassName = BeanPropertiesUtil.getString(baseModel, "modelClassName");
 
-		long[] groupIds = new long[] {BeanPropertiesUtil.getLongSilent(baseModel, "subsidiaryGroupId"), themeDisplay.getScopeGroupId()};
+		long[] groupIds = {BeanPropertiesUtil.getLongSilent(baseModel, "subsidiaryGroupId"), themeDisplay.getScopeGroupId()};
 
 		long evpRequestOrganizationId = BeanPropertiesUtil.getLongSilent(baseModel, "evpRequestOrganizationId");
 

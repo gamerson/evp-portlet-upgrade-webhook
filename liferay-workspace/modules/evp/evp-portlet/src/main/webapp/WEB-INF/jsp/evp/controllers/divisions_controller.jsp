@@ -176,7 +176,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 
 			List<EVPDivision> evpDivisions = alloyServiceInvoker.executeDynamicQuery(new Object[] {"companyId", themeDisplay.getCompanyId(), "type", type}, searchContainer.getStart(), searchContainer.getEnd());
 
-			List<EVPDivisionComposite> evpDivisionComposites = EVPCompositeUtil.getComposites(evpDivisions, EVPDivisionComposite.class, new Class<?>[] {EVPDivision.class}, new Object[] {});
+			List<EVPDivisionComposite> evpDivisionComposites = EVPCompositeUtil.getComposites(evpDivisions, EVPDivisionComposite.class, new Class<?>[] {EVPDivision.class}, new Object[0]);
 
 			renderRequest.setAttribute("evpDivisionComposites" + typeString, evpDivisionComposites);
 
