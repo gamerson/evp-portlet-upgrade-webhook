@@ -22,7 +22,6 @@ import com.liferay.portal.kernel.exception.NoSuchModelException;
 public class NoSuchEmployeeException extends NoSuchModelException {
 
 	public NoSuchEmployeeException() {
-		super();
 	}
 
 	public NoSuchEmployeeException(String msg) {

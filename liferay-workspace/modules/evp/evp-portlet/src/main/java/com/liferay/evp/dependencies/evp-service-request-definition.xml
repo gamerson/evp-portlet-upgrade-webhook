@@ -2384,7 +2384,7 @@
 		<name>pending-review-by-manager-in-fork</name>
 		<actions>
 			<action>
-			<name>service-status-pending-review-by-manager-in-fork-action</name>
+				<name>service-status-pending-review-by-manager-in-fork-action</name>
 				<script>
 					<![CDATA[
 						import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
@@ -2745,22 +2745,22 @@
 				</template>
 				<template-language>freemarker</template-language>
 				<notification-type>email</notification-type>
-					<recipients receptionType="bcc">
-						<roles>
-							<role>
-								<role-type>organization</role-type>
-								<name>EVP History</name>
-							</role>
-						</roles>
-					</recipients>
-					<recipients>
-						<roles>
-							<role>
-								<role-type>organization</role-type>
-								<name>Country Coordinator</name>
-							</role>
-						</roles>
-					</recipients>
+				<recipients receptionType="bcc">
+					<roles>
+						<role>
+							<role-type>organization</role-type>
+							<name>EVP History</name>
+						</role>
+					</roles>
+				</recipients>
+				<recipients>
+					<roles>
+						<role>
+							<role-type>organization</role-type>
+							<name>Country Coordinator</name>
+						</role>
+					</roles>
+				</recipients>
 				<execution-type>onEntry</execution-type>
 			</notification>
 		</actions>
@@ -2899,22 +2899,22 @@
 				</template>
 				<template-language>freemarker</template-language>
 				<notification-type>email</notification-type>
-					<recipients receptionType="bcc">
-						<roles>
-							<role>
-								<role-type>organization</role-type>
-								<name>EVP History</name>
-							</role>
-						</roles>
-					</recipients>
-					<recipients>
-						<roles>
-							<role>
-								<role-type>organization</role-type>
-								<name>HR</name>
-							</role>
-						</roles>
-					</recipients>
+				<recipients receptionType="bcc">
+					<roles>
+						<role>
+							<role-type>organization</role-type>
+							<name>EVP History</name>
+						</role>
+					</roles>
+				</recipients>
+				<recipients>
+					<roles>
+						<role>
+							<role-type>organization</role-type>
+							<name>HR</name>
+						</role>
+					</roles>
+				</recipients>
 				<execution-type>onEntry</execution-type>
 			</notification>
 		</actions>

@@ -27,7 +27,6 @@ public static class UserComposite {
 
 	public EmailAddress getEmailAddress() throws Exception {
 		if (_emailAddress == null) {
-
 			AlloyServiceInvoker emailAddressAlloyServiceInvoker = new AlloyServiceInvoker(EmailAddress.class.getName());
 
 			List<EmailAddress> emailAddresses = emailAddressAlloyServiceInvoker.executeDynamicQuery(new Object[] {"classNameId", PortalUtil.getClassNameId(Contact.class), "classPK", getContactId()});

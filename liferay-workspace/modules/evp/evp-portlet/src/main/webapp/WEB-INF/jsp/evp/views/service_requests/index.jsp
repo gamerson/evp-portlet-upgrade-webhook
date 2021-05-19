@@ -236,7 +236,7 @@
 			</liferay-ui:search-container-column-text>
 
 			<liferay-ui:search-container-column-text
-					align="right"
+				align="right"
 			>
 				<liferay-ui:icon-menu>
 					<c:if test='${AlloyPermission.contains(themeDisplay, evpServiceRequestComposite.evpServiceRequest, "view")}'>
@@ -291,7 +291,7 @@
 						</portlet:actionURL>
 
 						<liferay-ui:icon-delete
-								url="${deleteEVPServiceRequestURL}"
+							url="${deleteEVPServiceRequestURL}"
 						/>
 					</c:if>
 				</liferay-ui:icon-menu>

@@ -59,13 +59,11 @@ public static class EVPValidator {
 
 		int employmentType = EVPUtil.getEmploymentType(user.getUserId());
 
-		String employmentTypeLabel = EVPConstants.getEmploymentTypeLabel(employmentType);
-
 		EVPDivision subsidiaryEVPDivision = EVPDivisionUtil.getSubsidiaryEVPDivision(user.getUserId());
 
 		List<String> enabledEmploymentTypeLabels = EVPUtil.getEnabledEmploymentTypeLabels(themeDisplay.getCompanyId(), subsidiaryEVPDivision.getOrganizationGroupId());
 
-		if (!enabledEmploymentTypeLabels.contains(employmentTypeLabel)) {
+		if (!enabledEmploymentTypeLabels.contains(EVPConstants.getEmploymentTypeLabel(employmentType))) {
 			StringBundler sb = new StringBundler(enabledEmploymentTypeLabels.size() * 2);
 
 			for (String enabledEmploymentTypeLabel : enabledEmploymentTypeLabels) {

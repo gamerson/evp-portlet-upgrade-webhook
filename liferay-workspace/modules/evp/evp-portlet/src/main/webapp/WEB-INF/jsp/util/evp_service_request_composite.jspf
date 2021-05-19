@@ -190,6 +190,7 @@ public static class EVPServiceRequestComposite {
 		if (_creatorUser == null) {
 			_creatorUser = UserLocalServiceUtil.getUser(getUserId());
 		}
+
 		return _creatorUser;
 	}
 

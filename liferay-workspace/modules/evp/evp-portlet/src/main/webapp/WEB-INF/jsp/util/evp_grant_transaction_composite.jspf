@@ -60,7 +60,7 @@ public static class EVPGrantTransactionComposite {
 
 		FileEntry fileEntry = getFileEntry();
 
-		return DLUtil.getPreviewURL(fileEntry, fileEntry.getFileVersion(), themeDisplay, StringPool.BLANK); <%-- FIXME: @deprecated As of Mueller (7.2.x), replaced by {@link com.liferay.document.library.util.DLURLHelper#getPreviewURL(FileEntry,FileVersion,ThemeDisplay,String)} --%>
+		return DLUtil.getPreviewURL(fileEntry, fileEntry.getFileVersion(), themeDisplay, StringPool.BLANK); <%-- FIXME: @deprecated As of Mueller (7.2.x), replaced by {@link com.liferay.document.library.util.DLURLHelper#getPreviewURL(FileEntry, FileVersion, ThemeDisplay, String)} --%>
 	}
 
 	public String getFileEntryTitle() throws Exception {

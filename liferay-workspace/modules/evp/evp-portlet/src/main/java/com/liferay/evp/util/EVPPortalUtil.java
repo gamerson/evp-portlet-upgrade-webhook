@@ -76,6 +76,7 @@ public class EVPPortalUtil {
 
 		for (ListType listType : listTypes) {
 			if (Validator.equals(listType.getName(), name)) { // FIXME: @deprecated As of Judson (7.1.x)
+
 				return listType.getListTypeId();
 			}
 		}

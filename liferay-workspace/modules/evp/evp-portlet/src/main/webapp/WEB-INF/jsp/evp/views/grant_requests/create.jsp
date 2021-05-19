@@ -123,7 +123,7 @@
 
 					<aui:input cssClass="span12 ${permanentEditabilityCSSClass}" disabled="${disabled || (evpGrantRequestComposite.parentEVPGrantRequestId > 0)}" name="countryHidden" type="hidden" />
 
-					<aui:select cssClass="span12 ${permanentEditabilityCSSClass}" disabled="${disabled || (evpGrantRequestComposite.parentEVPGrantRequestId > 0)}" label="region" name="regionId" onChange="${renderResponse.namespace}updateRegion(this.value);" required="${(evpGrantRequestComposite.parentEVPGrantRequestId == 0) ? evpGrantRequestComposite.getCreatorSubsidiaryProperty(PortletPropsKeys.SUBSIDIARY_CONFIGURATION_ADDRESS_STATE_REQUIRED) : false}"  wrapperCssClass="span3" />
+					<aui:select cssClass="span12 ${permanentEditabilityCSSClass}" disabled="${disabled || (evpGrantRequestComposite.parentEVPGrantRequestId > 0)}" label="region" name="regionId" onChange="${renderResponse.namespace}updateRegion(this.value);" required="${(evpGrantRequestComposite.parentEVPGrantRequestId == 0) ? evpGrantRequestComposite.getCreatorSubsidiaryProperty(PortletPropsKeys.SUBSIDIARY_CONFIGURATION_ADDRESS_STATE_REQUIRED) : false}" wrapperCssClass="span3" />
 
 					<aui:input cssClass="span12 ${permanentEditabilityCSSClass}" disabled="${disabled || (evpGrantRequestComposite.parentEVPGrantRequestId > 0)}" name="regionHidden" type="hidden" />
 
@@ -133,6 +133,7 @@
 								return !val.match('[^A-Za-z0-9\s-]+');
 							}
 						</aui:validator>
+
 						<aui:validator name="maxLength">${EVPConstants.MAX_FIELD_LENGTH_ZIP}</aui:validator>
 					</aui:input>
 
@@ -154,7 +155,7 @@
 						<aui:validator name="email" />
 					</aui:input>
 
-					<aui:model-context bean="${evpGrantRequestComposite.contactUserPhone}"  model="<%= Phone.class %>" />
+					<aui:model-context bean="${evpGrantRequestComposite.contactUserPhone}" model="<%= Phone.class %>" />
 
 					<aui:input cssClass="span12 ${permanentEditabilityCSSClass}" disabled="${disabled || (evpGrantRequestComposite.parentEVPGrantRequestId > 0)}" helpMessage="please-enter-the-phone-number-of-your-contact" label="contact-phone" name="contactUserPhone" type="text" value="${evpGrantRequestComposite.contactUserPhone.number}" wrapperCssClass="span3" />
 				</aui:row>

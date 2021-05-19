@@ -186,7 +186,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 
 		String transitionName = ParamUtil.getString(request, "transitionName");
 
-		if (Validator.equals(transitionName, EVPWorkflowConstants.GRANT_TRANSITION_MARK_AS_CHECK_SENT)) { <%-- FIXME: @deprecated As of Judson (7.1.x) --%>
+		if (Validator.equals(transitionName, EVPWorkflowConstants.GRANT_TRANSITION_MARK_AS_CHECK_SENT)) {<%-- FIXME: @deprecated As of Judson (7.1.x) --%>
 			EVPDivision subsidiaryEVPDivision = EVPDivisionUtil.getSubsidiaryEVPDivision(evpGrantRequest.getUserId());
 
 			List<EVPGrantTransaction> evpGrantTransactions = _fetchEVPGrantTransactions(evpGrantRequest.getEvpGrantRequestId());
@@ -196,9 +196,7 @@ public class AlloyControllerImpl extends EVPAlloyControllerImpl {
 			for (EVPGrantTransaction evpGrantTransaction : evpGrantTransactions) {
 				String evpGrantTransactionType = EVPGrantTransactionConstants.getGrantTypeLabel(evpGrantTransaction.getGrantType());
 
-				Date date = EVPUtil.fetchDate(request, evpGrantTransactionType + "Date");
-
-				evpGrantTransaction.setDate(date);
+				evpGrantTransaction.setDate(EVPUtil.fetchDate(request, evpGrantTransactionType + "Date"));
 
 				String number = ParamUtil.getString(request, evpGrantTransactionType + "Number");
 

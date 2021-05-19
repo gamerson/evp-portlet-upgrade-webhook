@@ -173,6 +173,7 @@ public class EVPServletContextListener
 			return RoleConstants.TYPE_ORGANIZATION;
 		}
 		else if (Validator.equals(roleLabel, RoleConstants.TYPE_SITE_LABEL)) { // FIXME: @deprecated As of Judson (7.1.x)
+
 			return RoleConstants.TYPE_SITE;
 		}
 		else {

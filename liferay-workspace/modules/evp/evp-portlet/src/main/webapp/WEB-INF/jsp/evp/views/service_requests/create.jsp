@@ -142,6 +142,7 @@
 								return !val.match('[^A-Za-z0-9\s-]+');
 							}
 						</aui:validator>
+
 						<aui:validator name="maxLength">${EVPConstants.MAX_FIELD_LENGTH_ZIP}</aui:validator>
 					</aui:input>
 

@@ -27,6 +27,7 @@
 	<aui:field-wrapper name="description">
 		${evpGrantTransaction.description}
 	</aui:field-wrapper>
+
 	<aui:field-wrapper name="createdBy">
 		${evpGrantTransaction.userName}
 	</aui:field-wrapper>
