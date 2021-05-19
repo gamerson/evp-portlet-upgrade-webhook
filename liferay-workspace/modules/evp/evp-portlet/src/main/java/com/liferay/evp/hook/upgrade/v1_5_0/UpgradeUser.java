@@ -42,7 +42,7 @@ public class UpgradeUser extends UpgradeProcess {
 		ResultSet rs = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			StringBundler sb = new StringBundler(6);
 
