@@ -14,23 +14,24 @@ buildscript {
 apply plugin: "com.liferay.css.builder"
 
 dependencies {
-	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
-	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
-
-	portalCommonCSS group: "com.liferay", name: "com.liferay.frontend.css.common"
-	compile group: "org.apache.xmlbeans", name: "xmlbeans", version: "2.6.0"
-	compile group: "commons-logging", name: "commons-logging", version: "1.1.3"
-	compile group: "log4j", name: "log4j", version: "1.2.17"
 	compile group: "com.liferay.portal", name: "com.liferay.util.bridges"
 	compile group: "com.liferay.portal", name: "com.liferay.util.java"
 	compile group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "5.3.5"
+	compile group: "commons-logging", name: "commons-logging", version: "1.1.3"
 	compile group: "dom4j", name: "dom4j", version: "1.6.1"
 	compile group: "javax.servlet.jsp.jstl", name: "jstl-api", version: "1.2"
-	compile group: "org.glassfish.web", name: "jstl-impl", version: "1.2"
+	compile group: "log4j", name: "log4j", version: "1.2.17"
 	compile group: "org.apache.poi", name: "poi", version: "3.9"
 	compile group: "org.apache.poi", name: "poi-ooxml", version: "3.9"
 	compile group: "org.apache.poi", name: "poi-ooxml-schemas", version: "3.9"
+	compile group: "org.apache.xmlbeans", name: "xmlbeans", version: "2.6.0"
+	compile group: "org.glassfish.web", name: "jstl-impl", version: "1.2"
 	compile rootProject.files("libs/stax-api.jar")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
 	compileOnly project(":modules:evp:evp-api")
 
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+
+	portalCommonCSS group: "com.liferay", name: "com.liferay.frontend.css.common"
 }

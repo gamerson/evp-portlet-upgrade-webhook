@@ -261,7 +261,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 	protected String[] getBankFields(long requestId) throws Exception {
 		Connection con = null;
 
-		String[] tableNames = new String[] {
+		String[] tableNames = {
 			"evp_SpainGrantRequest", "evp_GermanyGrantRequest"
 		};
 
@@ -363,7 +363,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 	protected Object[] getStatusFields(long requestId) throws Exception {
 		Connection con = null;
 
-		String[] tableNames = new String[] {
+		String[] tableNames = {
 			"evp_USGrantRequest", "evp_ChinaGrantRequest",
 			"evp_SpainGrantRequest", "evp_BrazilGrantRequest",
 			"evp_GermanyGrantRequest"
