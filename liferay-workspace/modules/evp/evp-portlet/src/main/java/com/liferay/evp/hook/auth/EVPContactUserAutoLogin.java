@@ -18,10 +18,10 @@ import com.liferay.alloy.mvc.AlloyServiceInvoker;
 import com.liferay.compat.portal.util.PortalUtil;
 import com.liferay.evp.model.EVPServiceRequest;
 import com.liferay.evp.util.EVPConstants;
-import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.security.auto.login.BaseAutoLogin;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.Validator;
 
 import java.util.List;
 
