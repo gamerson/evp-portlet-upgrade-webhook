@@ -270,7 +270,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 		sb.append(requestId);
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			for (String tableName : tableNames) {
 				sb.setStringAt(tableName, 2);
@@ -328,7 +328,7 @@ public class UpgradeEVPServiceRequest extends UpgradeProcess {
 		PreparedStatement ps2 = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			ps2 = con.prepareStatement(
 				"select * from evp_GeneralVolunteerServiceCompletion where " +
