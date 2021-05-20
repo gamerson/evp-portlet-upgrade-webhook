@@ -24,14 +24,14 @@ import com.liferay.evp.service.EVPEmployeeLocalServiceUtil;
 import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.util.Base64;
 import com.liferay.portal.kernel.util.DateFormatFactoryUtil;
 import com.liferay.portal.kernel.util.FileUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.StringPool;
-import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.security.ldap.PortalLDAPImporterUtil;
-import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 
 import java.net.SocketTimeoutException;
 import java.net.URL;
@@ -89,7 +89,8 @@ public class EVPUtil {
 		catch (Exception e) {
 			throw new Exception(
 				"Unable to retrieve employment type for user " +
-				user.getFullName(), e);
+					user.getFullName(),
+				e);
 		}
 
 		Date hireDate = null;
