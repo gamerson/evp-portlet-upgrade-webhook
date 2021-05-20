@@ -21,10 +21,10 @@ import com.liferay.evp.util.EVPWorkflowUtil;
 import com.liferay.evp.workflow.EVPGrantRequestWorkflowHandler;
 import com.liferay.evp.workflow.EVPServiceRequestWorkflowHandler;
 import com.liferay.portal.kernel.dao.jdbc.DataAccess;
-import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
 import com.liferay.portal.kernel.model.Company;
 import com.liferay.portal.kernel.service.CompanyLocalServiceUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
