@@ -172,7 +172,7 @@
 			}
 		};
 
-		formValidator.STRINGS.validEndDate = '<%= UnicodeLanguageUtil.get(pageContext, "the-end-date-must-be-after-or-equal-to-the-start-date") %>'; <%-- FIXME: PortletConfig get/format methods --%>
+		formValidator.STRINGS.validEndDate = '<%= UnicodeLanguageUtil.get(pageContext, "the-end-date-must-be-after-or-equal-to-the-start-date") %>'; <%-- FIXME: PortletConfig get/format methods --%> <%-- FIXME: PortletConfig get/format methods --%>
 
 		var rules = {
 		};
