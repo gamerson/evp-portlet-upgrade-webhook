@@ -22,7 +22,6 @@ import com.liferay.evp.model.EVPServiceRequest;
 import com.liferay.evp.service.EVPGrantRequestLocalServiceUtil;
 import com.liferay.evp.service.EVPServiceRequestLocalServiceUtil;
 import com.liferay.evp.util.EVPPortalUtil;
-import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.model.Contact;
 import com.liferay.portal.kernel.model.EmailAddress;
 import com.liferay.portal.kernel.model.ListTypeConstants;
@@ -31,6 +30,7 @@ import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.service.EmailAddressLocalServiceUtil;
 import com.liferay.portal.kernel.service.PhoneLocalServiceUtil;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.StringPool;
 
 import java.util.Date;
 import java.util.List;
