@@ -29,8 +29,8 @@ public class EVPConstants {
 	public static final String OVERRIDE_TYPE_INELIGIBLE = "ineligible";
 
 	public static final String[] OVERRIDE_TYPES = {
-		OVERRIDE_TYPE_DEFAULT, OVERRIDE_TYPE_ELIGIBLE,
-		OVERRIDE_TYPE_INELIGIBLE};
+		OVERRIDE_TYPE_DEFAULT, OVERRIDE_TYPE_ELIGIBLE, OVERRIDE_TYPE_INELIGIBLE
+	};
 
 	public static final String REQUEST_PARAMETER_NAME_CONTACT_USER_HASH =
 		"contactUserHash";

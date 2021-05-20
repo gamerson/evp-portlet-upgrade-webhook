@@ -21,6 +21,16 @@ import com.liferay.evp.service.EVPKaleoForkInstanceLocalServiceUtil;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.model.Role;
+import com.liferay.portal.kernel.model.RoleConstants;
+import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.model.WorkflowInstanceLink;
+import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
+import com.liferay.portal.kernel.service.ServiceContext;
+import com.liferay.portal.kernel.service.UserGroupRoleLocalServiceUtil;
+import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.service.WorkflowDefinitionLinkLocalServiceUtil;
+import com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalServiceUtil;
 import com.liferay.portal.kernel.util.DateFormatFactoryUtil;
 import com.liferay.portal.kernel.util.FileUtil;
 import com.liferay.portal.kernel.util.GetterUtil;
@@ -37,16 +47,6 @@ import com.liferay.portal.kernel.workflow.WorkflowTask;
 import com.liferay.portal.kernel.workflow.WorkflowTaskAssignee;
 import com.liferay.portal.kernel.workflow.WorkflowTaskManagerUtil;
 import com.liferay.portal.kernel.workflow.WorkflowThreadLocal;
-import com.liferay.portal.kernel.model.Role;
-import com.liferay.portal.kernel.model.RoleConstants;
-import com.liferay.portal.kernel.model.User;
-import com.liferay.portal.kernel.model.WorkflowInstanceLink;
-import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
-import com.liferay.portal.kernel.service.ServiceContext;
-import com.liferay.portal.kernel.service.UserGroupRoleLocalServiceUtil;
-import com.liferay.portal.kernel.service.UserLocalServiceUtil;
-import com.liferay.portal.kernel.service.WorkflowDefinitionLinkLocalServiceUtil;
-import com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalServiceUtil;
 
 import java.io.InputStream;
 import java.io.Serializable;
@@ -74,8 +74,8 @@ public class EVPWorkflowUtil {
 		DateFormat dateFormat = DateFormatFactoryUtil.getSimpleDateFormat(
 			"yyyy-MM-dd");
 
-		String title = "Automatically deployed on " + dateFormat.format(
-			new Date());
+		String title =
+			"Automatically deployed on " + dateFormat.format(new Date());
 
 		InputStream inputStream = null;
 
@@ -115,7 +115,7 @@ public class EVPWorkflowUtil {
 
 				returnValue =
 					EVPWorkflowConstants.
-					SERVICE_TRANSITION_REQUEST_INFO_FROM_USER;
+						SERVICE_TRANSITION_REQUEST_INFO_FROM_USER;
 			}
 			else if (ArrayUtil.contains(
 						EVPWorkflowConstants.SERVICE_STATUSES_REJECTED,
@@ -255,7 +255,7 @@ public class EVPWorkflowUtil {
 				}
 				else if ((userId == ownerId) &&
 						 (workflowTaskAssignee.getAssigneeClassPK() ==
-							ownerRole.getRoleId())) {
+							 ownerRole.getRoleId())) {
 
 					return true;
 				}
