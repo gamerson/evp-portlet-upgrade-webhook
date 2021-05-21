@@ -252,7 +252,7 @@ public class EVPDivisionModelImpl extends BaseModelImpl<EVPDivision>
 
 	@Override
 	public String getUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 	}
 
 	@Override
