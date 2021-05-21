@@ -47,8 +47,8 @@ public class EVPFilter extends BaseFilter {
 
 		String ppid = request.getParameter("p_p_id");
 
-		if (Validator.equals(ppid, PortletKeys.FAST_LOGIN) || // FIXME: @deprecated As of Judson (7.1.x)
-			Validator.equals(ppid, PortletKeys.LOGIN)) { // FIXME: @deprecated As of Judson (7.1.x)
+		if (Validator.equals(ppid, PortletKeys.FAST_LOGIN) || // FIXME: @deprecated As of Judson (7.1.x) // FIXME: @deprecated As of Judson (7.1.x)
+			Validator.equals(ppid, PortletKeys.LOGIN)) { // FIXME: @deprecated As of Judson (7.1.x) // FIXME: @deprecated As of Judson (7.1.x)
 
 			return false;
 		}
