@@ -234,7 +234,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 		sb.append(requestId);
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			for (String tableName : tableNames) {
 				sb.setStringAt(tableName, 1);
@@ -277,7 +277,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 		ResultSet rs = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			ps = con.prepareStatement(
 				"select fileEntryId from evp_RequestFile where requestId = " +
@@ -339,7 +339,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 		sb.append(requestId);
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			for (String tableName : tableNames) {
 				sb.setStringAt(tableName, 2);
@@ -405,7 +405,7 @@ public class UpgradeEVPGrantRequest extends UpgradeProcess {
 		PreparedStatement ps2 = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			ps2 = con.prepareStatement(
 				"select * from evp_GrantTransaction where requestId = ?");
