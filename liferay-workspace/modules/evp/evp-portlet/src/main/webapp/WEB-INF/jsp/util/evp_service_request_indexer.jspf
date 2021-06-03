@@ -131,12 +131,12 @@ public static class EVPServiceRequestIndexer extends BaseAlloyIndexer {
 
 		statuses.add(evpServiceRequest.getStatus());
 
-		document.addKeyword(Field.STATUS, statuses.toArray(new Integer[statuses.size()]));
+		document.addKeyword(Field.STATUS, statuses.toArray(new Integer[0]));
 
 		statusLabels.add(EVPWorkflowConstants.getServiceStatusLabel(evpServiceRequest.getStatus()));
 
-		document.addText("statusLabel", statusLabels.toArray(new String[statusLabels.size()]));
-		document.addKeyword("statusLabel_sortable", statusLabels.toArray(new String[statusLabels.size()]));
+		document.addText("statusLabel", statusLabels.toArray(new String[0]));
+		document.addKeyword("statusLabel_sortable", statusLabels.toArray(new String[0]));
 
 		document.addKeyword("subsidiaryGroupId", evpServiceRequest.getSubsidiaryGroupId());
 
