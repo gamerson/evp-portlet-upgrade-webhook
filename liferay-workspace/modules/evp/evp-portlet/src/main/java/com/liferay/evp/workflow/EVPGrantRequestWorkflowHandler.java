@@ -18,9 +18,6 @@ import com.liferay.evp.model.EVPGrantRequest;
 import com.liferay.evp.service.EVPGrantRequestLocalServiceUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.workflow.BaseWorkflowHandler;
-import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.kernel.model.ResourceConstants;
 import com.liferay.portal.kernel.model.Role;
 import com.liferay.portal.kernel.model.RoleConstants;
@@ -30,6 +27,9 @@ import com.liferay.portal.kernel.service.ResourcePermissionLocalServiceUtil;
 import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
+import com.liferay.portal.kernel.workflow.BaseWorkflowHandler;
+import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
 import java.io.Serializable;
 
@@ -72,9 +72,8 @@ public class EVPGrantRequestWorkflowHandler extends BaseWorkflowHandler {
 
 		evpGrantRequest.setStatus(status);
 
-		ServiceContext serviceContext =
-			(ServiceContext)workflowContext.get(
-				WorkflowConstants.CONTEXT_SERVICE_CONTEXT);
+		ServiceContext serviceContext = (ServiceContext)workflowContext.get(
+			WorkflowConstants.CONTEXT_SERVICE_CONTEXT);
 
 		User user = UserLocalServiceUtil.getUser(serviceContext.getUserId());
 
@@ -98,7 +97,8 @@ public class EVPGrantRequestWorkflowHandler extends BaseWorkflowHandler {
 
 		if (status == _GRANT_STATUS_MORE_INFO_FROM_USER) {
 			actionIds = new String[] {
-				"EDIT", "SET_OWN_STATUS", "UPDATE", "VIEW"};
+				"EDIT", "SET_OWN_STATUS", "UPDATE", "VIEW"
+			};
 		}
 		else {
 			actionIds = new String[] {"VIEW"};
