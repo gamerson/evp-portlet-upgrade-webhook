@@ -22,12 +22,6 @@ import com.liferay.evp.util.EVPDivisionUtil;
 import com.liferay.evp.util.EVPPortalUtil;
 import com.liferay.evp.util.EVPRoleConstants;
 import com.liferay.portal.kernel.dao.jdbc.DataAccess;
-import com.liferay.portal.kernel.util.CalendarFactoryUtil;
-import com.liferay.portal.kernel.util.GetterUtil;
-import com.liferay.portal.kernel.util.StreamUtil;
-import com.liferay.portal.kernel.util.StringPool;
-import com.liferay.portal.kernel.util.StringUtil;
-import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.model.Contact;
 import com.liferay.portal.kernel.model.Group;
 import com.liferay.portal.kernel.model.GroupConstants;
@@ -42,7 +36,13 @@ import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.ServiceContextThreadLocal;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
+import com.liferay.portal.kernel.util.CalendarFactoryUtil;
+import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.PortalUtil;
+import com.liferay.portal.kernel.util.StreamUtil;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.StringUtil;
+import com.liferay.portal.kernel.util.Validator;
 
 import java.io.InputStream;
 
@@ -239,7 +239,8 @@ public class UpgradeUser extends UpgradeProcess {
 					new long[] {
 						subsidiaryEVPDivision.getOrganizationGroupId(),
 						guestSiteGroup.getGroupId()
-					}, new long[0],
+					},
+					new long[0],
 					new long[] {organizationContactRole.getRoleId()},
 					new long[0], false, new ServiceContext());
 

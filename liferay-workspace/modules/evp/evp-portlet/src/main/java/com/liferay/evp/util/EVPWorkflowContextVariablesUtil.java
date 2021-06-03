@@ -45,8 +45,7 @@ public class EVPWorkflowContextVariablesUtil {
 			EVPDivisionLocalServiceUtil.getSubsidiaryPortletPropsValue(
 				companyId, subsidiaryGroupId,
 				PortletPropsKeys.
-					SUBSIDIARY_CONFIGURATION_APPROVE_WITH_MANAGER_FORK_ENABLED)
-			);
+					SUBSIDIARY_CONFIGURATION_APPROVE_WITH_MANAGER_FORK_ENABLED));
 
 		requestContext.put(
 			EVPWorkflowContextConstants.
