@@ -126,7 +126,7 @@ public class EVPServletContextListener
 
 				ResourcePermissionLocalServiceUtil.setResourcePermissions(
 					companyId, name, scope, primKey, role.getRoleId(),
-					actionIds.toArray(new String[actionIds.size()]));
+					actionIds.toArray(new String[0]));
 			}
 			else {
 				for (Element actionKeyElement : actionKeyElements) {
