@@ -77,11 +77,13 @@ public class EVPWorkflowConstants {
 
 	public static final int GRANT_STATUS_VALIDATION_REQUESTED_FROM_HR = 104;
 
-	public static final int[] GRANT_STATUSES_COMPLETE =
-		{GRANT_STATUS_CANCELLED, GRANT_STATUS_COMPLETED, GRANT_STATUS_REJECTED};
+	public static final int[] GRANT_STATUSES_COMPLETE = {
+		GRANT_STATUS_CANCELLED, GRANT_STATUS_COMPLETED, GRANT_STATUS_REJECTED
+	};
 
-	public static final int[] GRANT_STATUSES_EXCLUDABLE =
-		{GRANT_STATUS_CANCELLED, GRANT_STATUS_REJECTED};
+	public static final int[] GRANT_STATUSES_EXCLUDABLE = {
+		GRANT_STATUS_CANCELLED, GRANT_STATUS_REJECTED
+	};
 
 	public static final int SERVICE_FORK_TYPE_EVP_TEAM = 3;
 
@@ -116,9 +118,8 @@ public class EVPWorkflowConstants {
 	public static final String SERVICE_LABEL_FEEDBACK_FORM_APPROVED =
 		"approved-feedback-form";
 
-	public static final String
-		SERVICE_LABEL_FEEDBACK_PENDING_INFO_FROM_USER =
-			"feedback-form-pending-more-information-from-user";
+	public static final String SERVICE_LABEL_FEEDBACK_PENDING_INFO_FROM_USER =
+		"feedback-form-pending-more-information-from-user";
 
 	public static final String SERVICE_LABEL_FEEDBACK_PROOF_FORK =
 		"feedback-and-proof-fork";
@@ -201,8 +202,8 @@ public class EVPWorkflowConstants {
 
 	public static final int SERVICE_STATUS_APPROVED_BY_MANAGER = 206;
 
-	public static final int
-		SERVICE_STATUS_APPROVED_BY_MANAGER_AND_EVP_TEAM = 210;
+	public static final int SERVICE_STATUS_APPROVED_BY_MANAGER_AND_EVP_TEAM =
+		210;
 
 	public static final int
 		SERVICE_STATUS_AUTO_JOIN_EVP_TEAM_REQUESTED_INFO_FROM_USER = 238;
@@ -228,8 +229,8 @@ public class EVPWorkflowConstants {
 
 	public static final int SERVICE_STATUS_FEEDBACK_FORM_APPROVED = 229;
 
-	public static final int
-		SERVICE_STATUS_FEEDBACK_PENDING_INFO_FROM_USER = 228;
+	public static final int SERVICE_STATUS_FEEDBACK_PENDING_INFO_FROM_USER =
+		228;
 
 	public static final int SERVICE_STATUS_FEEDBACK_PROOF_FORK = 231;
 
@@ -598,8 +599,7 @@ public class EVPWorkflowConstants {
 			return GRANT_LABEL_REQUEST_SUBMITTED;
 		}
 		else if (grantStatus ==
-					GRANT_STATUS_VALIDATION_REQUESTED_FROM_COUNTRY_COORDINATOR)
-					{
+					GRANT_STATUS_VALIDATION_REQUESTED_FROM_COUNTRY_COORDINATOR) {
 
 			return GRANT_LABEL_VALIDATION_REQUESTED_FROM_COUNTRY_COORDINATOR;
 		}
@@ -720,8 +720,7 @@ public class EVPWorkflowConstants {
 			return SERVICE_LABEL_REJECTED_BY_MANAGER;
 		}
 		else if (serviceStatus ==
-					SERVICE_STATUS_AUTO_JOIN_EVP_TEAM_REQUESTED_INFO_FROM_USER)
-					{
+					SERVICE_STATUS_AUTO_JOIN_EVP_TEAM_REQUESTED_INFO_FROM_USER) {
 
 			return SERVICE_LABEL_AUTO_JOIN_EVP_TEAM_REQUESTED_INFO_FROM_USER;
 		}
@@ -782,8 +781,7 @@ public class EVPWorkflowConstants {
 			return SERVICE_LABEL_PENDING_REVIEW_BY_EVP_TEAM;
 		}
 		else if (serviceStatus ==
-					SERVICE_STATUS_PENDING_REVIEW_BY_MANAGER_AND_EVP_TEAM_FORK)
-				{
+					SERVICE_STATUS_PENDING_REVIEW_BY_MANAGER_AND_EVP_TEAM_FORK) {
 
 			return SERVICE_LABEL_PENDING_REVIEW_BY_MANAGER_AND_EVP_TEAM_FORK;
 		}
@@ -792,9 +790,7 @@ public class EVPWorkflowConstants {
 
 			return SERVICE_LABEL_PENDING_REVIEW_BY_EVP_TEAM;
 		}
-		else if (serviceStatus ==
-					SERVICE_STATUS_PENDING_REVIEW_BY_MANAGER) {
-
+		else if (serviceStatus == SERVICE_STATUS_PENDING_REVIEW_BY_MANAGER) {
 			return SERVICE_LABEL_PENDING_REVIEW_BY_MANAGER;
 		}
 		else if (serviceStatus ==
@@ -880,8 +876,7 @@ public class EVPWorkflowConstants {
 			return SERVICE_TRANSITION_LABEL_MARK_AS_VALID;
 		}
 		else if (serviceTransition.equals(
-					SERVICE_TRANSITION_REQUEST_COUNTRY_COORDINATOR_VALIDATION))
-				{
+					SERVICE_TRANSITION_REQUEST_COUNTRY_COORDINATOR_VALIDATION)) {
 
 			return SERVICE_TRANSITION_REQUEST_COUNTRY_COORDINATOR_VALIDATION;
 		}
@@ -916,11 +911,9 @@ public class EVPWorkflowConstants {
 			return SERVICE_TRANSITION_REQUEST_HR_VALIDATION;
 		}
 		else if (serviceTransition.equals(
-					SERVICE_TRANSITION_REQUEST_INFO_FROM_SERVICE_ORGANIZATION)
-				) {
+					SERVICE_TRANSITION_REQUEST_INFO_FROM_SERVICE_ORGANIZATION)) {
 
-			return
-				SERVICE_TRANSITION_LABEL_REQUEST_INFO_FROM_ORGANIZATION_CONTACT;
+			return SERVICE_TRANSITION_LABEL_REQUEST_INFO_FROM_ORGANIZATION_CONTACT;
 		}
 		else if (serviceTransition.equals(
 					SERVICE_TRANSITION_REQUEST_INFO_FROM_USER)) {
