@@ -167,12 +167,12 @@ public class EVPServletContextListener
 	}
 
 	protected int getRoleLabelType(String roleLabel) {
-		if (Validator.equals( // FIXME: @deprecated As of Judson (7.1.x)
+		if (Validator.equals( // FIXME: @deprecated As of Judson (7.1.x) // FIXME: @deprecated As of Judson (7.1.x)
 				roleLabel, RoleConstants.TYPE_ORGANIZATION_LABEL)) {
 
 			return RoleConstants.TYPE_ORGANIZATION;
 		}
-		else if (Validator.equals(roleLabel, RoleConstants.TYPE_SITE_LABEL)) { // FIXME: @deprecated As of Judson (7.1.x)
+		else if (Validator.equals(roleLabel, RoleConstants.TYPE_SITE_LABEL)) { // FIXME: @deprecated As of Judson (7.1.x) // FIXME: @deprecated As of Judson (7.1.x)
 			return RoleConstants.TYPE_SITE;
 		}
 		else {

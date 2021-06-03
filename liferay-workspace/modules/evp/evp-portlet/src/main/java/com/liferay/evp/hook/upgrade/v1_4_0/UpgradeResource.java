@@ -35,7 +35,7 @@ public class UpgradeResource extends UpgradeProcess {
 		ResultSet rs = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			ps = con.prepareStatement("select * from EVPGrantRequest");
 
@@ -64,7 +64,7 @@ public class UpgradeResource extends UpgradeProcess {
 		ResultSet rs = null;
 
 		try {
-			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
+			con = DataAccess.getUpgradeOptimizedConnection(); // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()} // FIXME: @deprecated As of Judson (7.1.x), replaced by {#getConnection()}
 
 			ps = con.prepareStatement("select * from EVPServiceRequest");
 
