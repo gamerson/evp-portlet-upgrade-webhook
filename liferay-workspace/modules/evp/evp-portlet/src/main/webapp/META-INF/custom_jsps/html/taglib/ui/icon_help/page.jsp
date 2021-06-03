@@ -19,5 +19,5 @@
 <span class="taglib-icon-help">
 	<img alt="" aria-labelledby="randomId" onBlur="Liferay.Portal.ToolTip.hide();" onFocus="Liferay.Portal.ToolTip.show(this);" onMouseOver="Liferay.Portal.ToolTip.show(this);" src="<%= imagePath %>" />
 
-	<span class="hide-accessible tooltip-text" id="randomId"><%= LanguageUtil.get(pageContext, message) %></span> <%-- FIXME: PortletConfig get/format methods --%>
+	<span class="hide-accessible tooltip-text" id="randomId"><%= LanguageUtil.get(pageContext, message) %></span> <%-- FIXME: PortletConfig get/format methods --%> <%-- FIXME: PortletConfig get/format methods --%>
 </span>
