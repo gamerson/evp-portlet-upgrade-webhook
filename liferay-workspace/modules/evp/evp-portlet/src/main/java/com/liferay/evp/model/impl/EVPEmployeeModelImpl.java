@@ -248,7 +248,7 @@ public class EVPEmployeeModelImpl extends BaseModelImpl<EVPEmployee>
 
 	@Override
 	public String getUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 	}
 
 	@Override
@@ -311,7 +311,7 @@ public class EVPEmployeeModelImpl extends BaseModelImpl<EVPEmployee>
 
 	@Override
 	public String getEmployeeUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getEmployeeUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getEmployeeUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 			_employeeUserUuid);
 	}
 
@@ -336,7 +336,7 @@ public class EVPEmployeeModelImpl extends BaseModelImpl<EVPEmployee>
 
 	@Override
 	public String getManagerUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getManagerUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getManagerUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 			_managerUserUuid);
 	}
 

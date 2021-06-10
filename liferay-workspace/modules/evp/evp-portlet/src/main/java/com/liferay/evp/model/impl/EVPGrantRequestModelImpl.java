@@ -381,7 +381,7 @@ public class EVPGrantRequestModelImpl extends BaseModelImpl<EVPGrantRequest>
 
 	@Override
 	public String getUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getUserId(), "uuid", _userUuid); // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 	}
 
 	@Override
@@ -456,7 +456,7 @@ public class EVPGrantRequestModelImpl extends BaseModelImpl<EVPGrantRequest>
 
 	@Override
 	public String getContactUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getContactUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getContactUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 			_contactUserUuid);
 	}
 
@@ -646,7 +646,7 @@ public class EVPGrantRequestModelImpl extends BaseModelImpl<EVPGrantRequest>
 
 	@Override
 	public String getStatusByUserUuid() throws SystemException {
-		return PortalUtil.getUserValue(getStatusByUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
+		return PortalUtil.getUserValue(getStatusByUserId(), "uuid", // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement // FIXME: @deprecated As of Wilberforce (7.0.x), with no direct replacement
 			_statusByUserUuid);
 	}
 
