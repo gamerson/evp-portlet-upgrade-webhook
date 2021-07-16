@@ -428,7 +428,7 @@
 			<portlet:namespace />minimumRequiredHours: '<liferay-ui:message arguments="${evpServiceRequestComposite.getCreatorSubsidiaryProperty(PortletPropsKeys.SUBSIDIARY_CONFIGURATION_MINIMUM_PART_TIME_WORKING_HOURS_PER_WEEK)}" key="the-minimum-part-time-hours-required-is-x" />',
 			<portlet:namespace />validEndDate: '<liferay-ui:message key="the-requested-end-date-must-be-after-or-equal-to-the-request-start-date" unicode="${true}" />',
 			<portlet:namespace />validStartDate: '<liferay-ui:message key="the-requested-start-date-must-be-after-today's-date" />',
-			<portlet:namespace />validZip: '<%= UnicodeLanguageUtil.get(pageContext, "the-zip-is-invalid") %>' <%-- FIXME: PortletConfig get/format methods --%>
+			<portlet:namespace />validZip: '<%= UnicodeLanguageUtil.get(pageContext, "the-zip-is-invalid") %>' <%-- FIXME: PortletConfig get/format methods --%> <%-- FIXME: PortletConfig get/format methods --%>
 		}
 	);
 
